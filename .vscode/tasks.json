@@ -12,6 +12,12 @@
             "type": "shell",
             "command": "java",
 			"args": ["-jar","./build/libs/sample-spark-kotlin-1.0-SNAPSHOT.jar"]
+		},
+		{
+			"label": "clean",
+            "type": "shell",
+            "command": "gradle",
+			"args": ["clean"]
 		}
 		
 	]
