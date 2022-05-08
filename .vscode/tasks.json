@@ -1,0 +1,18 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build",
+            "type": "shell",
+            "command": "gradle",
+			"args": ["build"]
+		},
+		{
+			"label": "run",
+            "type": "shell",
+            "command": "java",
+			"args": ["-jar","./build/libs/sample-spark-kotlin-1.0-SNAPSHOT.jar"]
+		}
+		
+	]
+}
