@@ -18,6 +18,14 @@ repositories{
 }
 
 dependencies {
-	implementation "org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1.1"
+	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 	implementation "com.sparkjava:spark-core:2.9.3"
+}
+
+jar {
+  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+  from configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+  manifest {
+    attributes 'Main-Class': "MainKt"
+  }
 }
